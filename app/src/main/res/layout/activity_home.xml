@@ -1,0 +1,228 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_gradient"
+        tools:context = ".Details">
+
+        <TextView
+            android:id="@+id/tagLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:text="To add more details click on the (+) button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_600"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tagLine" />
+
+        <TextView
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_600"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+        <TextView
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_600"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+        <TextView
+            android:id="@+id/locationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            android:visibility="gone"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_600"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneEditText" />
+        <TextView
+            android:id="@+id/professionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:visibility="gone"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_600"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
+        <TextView
+            android:id="@+id/genderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:visibility="gone"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress|textNoSuggestions"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_600"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/professionView" />
+
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/expanded_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+        </FrameLayout>
+
+
+
+        <ImageView
+            android:id="@+id/ivUpload"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/professionView"/>
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            android:layout_margin="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivUpload" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:backgroundTint="@color/white"
+            android:backgroundTintMode="src_over"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="30dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

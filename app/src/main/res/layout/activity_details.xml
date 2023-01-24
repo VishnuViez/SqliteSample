@@ -1,0 +1,285 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:background="@drawable/layout_gradient">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context = ".Details">
+
+        <TextView
+            android:id="@+id/tagLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/genderRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tagLine">
+            <RadioButton
+                android:id="@+id/maleRBG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/black"
+                android:paddingTop="15dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="16dp" />
+            <RadioButton
+                android:id="@+id/femaleRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="@color/black"
+                android:paddingTop="15dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="16dp"/>
+            <RadioButton
+                android:id="@+id/pntsRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prefer not to say"
+                android:textColor="@color/black"
+                android:paddingTop="15dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="15dp"
+                android:layout_marginLeft="16dp"/>
+
+        </RadioGroup>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/professionSec"
+            app:cardUseCompatPadding="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/addressEditText"
+            app:layout_constraintTop_toBottomOf="@+id/genderRB">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rootView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect_white"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp">
+
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="start"
+                    android:text="Profession"
+                    android:textAllCaps="false"
+                    android:textColor="@color/md_grey_600"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:gravity="end"
+                    android:minWidth="100dp"
+                    android:padding="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/spinnerIndicator"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="10dp" />
+
+                <ImageView
+                    android:id="@+id/spinnerIndicator"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/md_grey_600" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+       <!-- <AutoCompleteTextView
+            android:id="@+id/professionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:clickable="false"
+            android:hint="@string/profession"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/md_grey_600"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderRB" />-->
+
+        <TextView
+            android:id="@+id/addressEditText"
+            android:textIsSelectable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_white_rounded"
+            android:hint="@string/address"
+            android:inputType="textMultiLine"
+            android:paddingStart="16dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="15dp"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/md_grey_600"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/professionSec" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/getCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ripple_effect_black"
+            android:backgroundTint="@color/md_grey_600"
+            android:text="@string/getcurrlocation"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditText" />
+
+        <ImageView
+            android:id="@+id/ivUpload"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/getCurrentLocation"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/uploadImageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ripple_effect_black"
+            android:backgroundTint="@color/md_grey_600"
+            android:text="@string/uploadImg"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivUpload" />
+
+        <TextView
+            android:id="@+id/tvUploadVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Video will be uploaded once the details are saved"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/uploadImageBtn"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/uploadVideoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ripple_effect_black"
+            android:backgroundTint="@color/md_grey_600"
+            android:text="@string/uploadVideo"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvUploadVideo"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/ripple_effect_black"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/uploadVideoBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
